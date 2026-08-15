@@ -11,7 +11,7 @@ export function ChecklistItem({ id, label }: { id: string; label: string }) {
         role="checkbox"
         aria-checked={done}
         onClick={() => toggle(id)}
-        className={`group flex w-full items-start gap-3 rounded-xl border px-4 py-3.5 text-left transition-all duration-200 sm:py-3 ${
+        className={`lift group flex w-full items-start gap-3 rounded-xl border px-4 py-3.5 text-left transition-all duration-200 sm:py-3 ${
           done
             ? "border-primary/25 bg-primary/[0.04]"
             : "border-hairline bg-surface hover:border-foreground/20 hover:shadow-soft"

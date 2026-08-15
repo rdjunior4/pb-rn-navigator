@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ChecklistProvider } from "@/hooks/use-checklist";
 import { sections } from "@/data/checklist";
 import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { NavigationTabs } from "@/components/sections/NavigationTabs";
 import { ChecklistControls } from "@/components/sections/ChecklistControls";
@@ -10,6 +9,8 @@ import { ChecklistSection } from "@/components/sections/ChecklistSection";
 import { RoadmapSection } from "@/components/sections/RoadmapSection";
 import { ResultsSection } from "@/components/sections/ResultsSection";
 import { FinalGoal } from "@/components/sections/FinalGoal";
+import { ProgressWidget } from "@/components/checklist/ProgressWidget";
+import { Reveal } from "@/components/ui/reveal";
 
 const title = "PB & RN Foods — Transformação Digital Comercial B2B";
 const description =
@@ -61,23 +62,35 @@ function DashboardCallout() {
 function Index() {
   return (
     <ChecklistProvider>
-      <div id="topo" className="min-h-screen">
+      <div id="topo" className="min-h-screen pb-28 lg:pb-40">
         <Header />
         <main>
           <Hero />
-          <NavigationTabs />
-          <ChecklistControls />
-          {sections.map((section) => (
-            <ChecklistSection key={section.id} section={section}>
-              {section.id === "operacao" && <OnePlatformCallout />}
-              {section.id === "dashboard" && <DashboardCallout />}
-            </ChecklistSection>
+          <Reveal>
+            <NavigationTabs />
+          </Reveal>
+          <Reveal>
+            <ChecklistControls />
+          </Reveal>
+          {sections.map((section, i) => (
+            <Reveal key={section.id} delay={Math.min(i, 4) * 60}>
+              <ChecklistSection section={section}>
+                {section.id === "operacao" && <OnePlatformCallout />}
+                {section.id === "dashboard" && <DashboardCallout />}
+              </ChecklistSection>
+            </Reveal>
           ))}
-          <RoadmapSection />
-          <FinalGoal />
-          <ResultsSection />
+          <Reveal>
+            <RoadmapSection />
+          </Reveal>
+          <Reveal>
+            <FinalGoal />
+          </Reveal>
+          <Reveal>
+            <ResultsSection />
+          </Reveal>
         </main>
-        <Footer />
+        <ProgressWidget />
       </div>
     </ChecklistProvider>
   );

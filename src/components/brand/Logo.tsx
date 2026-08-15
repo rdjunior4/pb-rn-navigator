@@ -1,8 +1,7 @@
 import { useState } from "react";
-import logoAsset from "@/assets/pbrn-foods-logo.png.asset.json";
 
 /**
- * Renders the original PB & RN Foods logo asset.
+ * Renders the PB & RN Foods logo asset.
  * Proportions and colors untouched — the component only scales it.
  */
 export function Logo({ className = "h-11", inverted = false }: { className?: string; inverted?: boolean }) {
@@ -22,7 +21,7 @@ export function Logo({ className = "h-11", inverted = false }: { className?: str
 
   return (
     <img
-      src={logoAsset.url}
+      src="/logo-pbrn-black.png"
       alt="PB & RN Foods"
       onError={() => setFailed(true)}
       className={`w-auto object-contain ${className}`}

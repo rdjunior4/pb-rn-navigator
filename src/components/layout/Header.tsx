@@ -24,7 +24,7 @@ export function Header() {
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                className="nav-link rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
               >
                 {l.label}
               </a>
