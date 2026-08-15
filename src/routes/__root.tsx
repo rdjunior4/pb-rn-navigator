@@ -81,17 +81,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Painel estratégico da transformação digital comercial da PB & RN Foods.",
+          "Painel estratégico da PB & RN Foods para acompanhar a evolução do e-commerce em uma Plataforma Digital B2B: checklist, roadmap de 90 dias e resultados esperados.",
       },
       { name: "author", content: "PB & RN Foods" },
       { property: "og:title", content: "PB & RN Foods — Plataforma Digital B2B" },
       {
         property: "og:description",
         content:
-          "Painel estratégico da transformação digital comercial da PB & RN Foods.",
+          "Painel estratégico da PB & RN Foods para acompanhar a evolução do e-commerce em uma Plataforma Digital B2B: checklist, roadmap de 90 dias e resultados esperados.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "PB & RN Foods — Plataforma Digital B2B" },
+      { name: "twitter:description", content: "Painel estratégico da PB & RN Foods para acompanhar a evolução do e-commerce em uma Plataforma Digital B2B: checklist, roadmap de 90 dias e resultados esperados." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e2126389-1192-427b-adc2-45475a0c9881" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e2126389-1192-427b-adc2-45475a0c9881" },
     ],
     links: [
       {
