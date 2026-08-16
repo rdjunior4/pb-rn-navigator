@@ -14,18 +14,18 @@ export function ChecklistControls() {
             {overall.done} de {overall.total} ações concluídas · salvo automaticamente neste navegador
           </p>
         </div>
-        <div className="no-print flex shrink-0 flex-wrap gap-2">
+        <div className="no-print flex w-full shrink-0 gap-2 sm:w-auto">
           <button
             type="button"
             onClick={checkAll}
-            className="rounded-lg border border-hairline px-4 py-2.5 text-sm font-semibold transition-colors hover:border-foreground/30 hover:bg-accent"
+            className="flex-1 rounded-lg border border-hairline px-4 py-2.5 text-sm font-semibold transition-colors hover:border-foreground/30 hover:bg-accent sm:flex-none"
           >
             Marcar todos
           </button>
           <button
             type="button"
             onClick={() => setConfirming(true)}
-            className="rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 sm:flex-none"
           >
             Limpar checklist
           </button>

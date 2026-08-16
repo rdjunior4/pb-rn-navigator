@@ -62,7 +62,7 @@ function DashboardCallout() {
 function Index() {
   return (
     <ChecklistProvider>
-      <div id="topo" className="min-h-screen pb-28 lg:pb-40">
+      <div id="topo" className="min-h-screen">
         <Header />
         <main>
           <Hero />
