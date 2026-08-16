@@ -23,39 +23,35 @@ export function ChecklistSection({
   const progress = progressFor(section.items.map((i) => i.id));
 
   return (
-    <section id={section.id} className="border-b border-hairline py-16 lg:py-24">
+    <section id={section.id} className="border-b border-hairline py-16 lg:py-20">
       <div className="mx-auto max-w-4xl px-5 lg:px-8">
-        <div className="lg:grid lg:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] lg:items-start lg:gap-14">
-          <div className="lg:sticky lg:top-[150px] lg:self-start">
-            <h2 className="text-2xl font-extrabold sm:text-3xl">
-              <span className="text-primary">{section.index}.</span> {section.title}
-            </h2>
-            {section.support && (
-              <p className="mt-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                {section.support}
-              </p>
-            )}
-            <div className="mt-6 max-w-xs">
-              <div className="mb-2 flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">Concluído</span>
-                <span className="font-semibold tabular-nums">
-                  {progress.done}/{progress.total}
-                </span>
-              </div>
-              <ProgressBar percent={progress.percent} size="sm" />
+        <div className="max-w-2xl">
+          <h2 className="text-2xl font-extrabold sm:text-3xl">
+            <span className="text-primary">{section.index}.</span> {section.title}
+          </h2>
+          {section.support && (
+            <p className="mt-3 text-[0.95rem] leading-relaxed text-muted-foreground">
+              {section.support}
+            </p>
+          )}
+          <div className="mt-6 max-w-xs">
+            <div className="mb-2 flex items-center justify-between text-sm">
+              <span className="text-muted-foreground">Concluído</span>
+              <span className="font-semibold tabular-nums">
+                {progress.done}/{progress.total}
+              </span>
             </div>
-          </div>
-
-          <div className="mt-8 min-w-0 lg:mt-0">
-            <ul className="grid gap-2.5 sm:grid-cols-2">
-              {section.items.map((item) => (
-                <ChecklistItem key={item.id} id={item.id} label={item.label} />
-              ))}
-            </ul>
-            {children}
-            {section.objective && <ObjectiveCallout text={section.objective} />}
+            <ProgressBar percent={progress.percent} size="sm" />
           </div>
         </div>
+
+        <ul className="mt-8 grid gap-2.5">
+          {section.items.map((item) => (
+            <ChecklistItem key={item.id} id={item.id} label={item.label} />
+          ))}
+        </ul>
+        {children}
+        {section.objective && <ObjectiveCallout text={section.objective} />}
       </div>
     </section>
   );

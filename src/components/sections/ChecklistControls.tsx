@@ -7,14 +7,14 @@ export function ChecklistControls() {
 
   return (
     <div id="checklist" className="border-b border-hairline bg-background">
-      <div className="mx-auto flex max-w-4xl flex-col gap-5 px-5 py-6 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <div className="mx-auto flex max-w-4xl flex-col gap-5 px-5 py-6 lg:px-8">
         <div className="min-w-0">
           <h2 className="text-lg font-extrabold">Checklist da transformação</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            {overall.done} de {overall.total} ações concluídas · salvo automaticamente na nuvem
+            {overall.done} de {overall.total} ações concluídas · salvo automaticamente neste navegador
           </p>
         </div>
-        <div className="no-print flex w-full shrink-0 gap-2 sm:w-auto">
+        <div className="no-print flex w-full gap-2">
           <button
             type="button"
             onClick={checkAll}
@@ -42,7 +42,7 @@ export function ChecklistControls() {
           <div className="w-full max-w-md rounded-2xl bg-surface p-7 shadow-lift">
             <h3 className="text-xl font-extrabold">Limpar todo o checklist?</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Todas as marcações de progresso serão apagadas na nuvem. Esta ação não pode ser
+              Todas as marcações de progresso serão apagadas deste navegador. Esta ação não pode ser
               desfeita.
             </p>
             <div className="mt-7 flex justify-end gap-2">

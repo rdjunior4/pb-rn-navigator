@@ -10,8 +10,7 @@ export function Hero() {
       <div className="hero-glow pointer-events-none absolute -left-32 -top-32 size-[28rem] rounded-full blur-3xl" aria-hidden />
       <div className="hero-glow hero-glow-2 pointer-events-none absolute -right-24 top-24 size-[22rem] rounded-full blur-3xl" aria-hidden />
       <div className="relative mx-auto max-w-4xl px-5 py-16 lg:py-24">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:items-start lg:gap-16">
-          <div className="min-w-0">
+        <div className="min-w-0">
           <p className="eyebrow text-primary animate-rise" style={{ animationDelay: "40ms" }}>
             Plataforma Digital B2B
           </p>
@@ -49,7 +48,7 @@ export function Hero() {
         </div>
 
         <aside
-          className="lift self-start rounded-3xl bg-graphite p-8 text-graphite-foreground shadow-lift animate-rise print-block sm:p-10 lg:sticky lg:top-[150px]"
+          className="lift mt-10 max-w-xl rounded-3xl bg-graphite p-8 text-graphite-foreground shadow-lift animate-rise print-block sm:p-10"
           style={{ animationDelay: "260ms" }}
         >
           <p className="eyebrow text-graphite-muted">Meta Estratégica</p>
@@ -65,7 +64,6 @@ export function Hero() {
             <span className="text-sm text-graphite-muted">para a primeira virada</span>
           </div>
         </aside>
-        </div>
       </div>
     </section>
   );

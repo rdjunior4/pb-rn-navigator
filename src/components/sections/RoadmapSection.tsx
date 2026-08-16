@@ -43,7 +43,7 @@ export function RoadmapSection() {
           Três ciclos para acelerar a primeira virada digital.
         </p>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5">
           {roadmap.map((phase) => (
             <RoadmapPhase key={phase.id} phase={phase} />
           ))}
