@@ -13,6 +13,11 @@ import {
   type ChecklistState,
   type ChecklistStorage,
 } from "@/lib/checklist-storage";
+import {
+  isSupabaseConfigured,
+  subscribeChecklist,
+  supabaseChecklistStorage,
+} from "@/lib/supabase-checklist-storage";
 
 type ChecklistContextValue = {
   state: ChecklistState;
@@ -28,7 +33,7 @@ const ChecklistContext = createContext<ChecklistContextValue | null>(null);
 
 export function ChecklistProvider({
   children,
-  storage = localChecklistStorage,
+  storage = isSupabaseConfigured ? supabaseChecklistStorage : localChecklistStorage,
 }: {
   children: ReactNode;
   storage?: ChecklistStorage;
@@ -47,6 +52,14 @@ export function ChecklistProvider({
       active = false;
     };
   }, [storage]);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured) return;
+    const unsubscribe = subscribeChecklist((incoming) => {
+      setState(incoming);
+    });
+    return unsubscribe;
+  }, []);
 
   const commit = useCallback(
     (next: ChecklistState) => {

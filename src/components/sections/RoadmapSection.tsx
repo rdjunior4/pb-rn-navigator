@@ -36,14 +36,14 @@ function RoadmapPhase({ phase }: { phase: RoadmapPhaseData }) {
 export function RoadmapSection() {
   return (
     <section id="roadmap" className="border-b border-hairline bg-secondary/60 py-16 lg:py-24">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="mx-auto max-w-4xl px-5 lg:px-8">
         <p className="eyebrow text-primary">Roadmap</p>
         <h2 className="mt-4 text-3xl font-extrabold sm:text-4xl">Roadmap — 90 dias</h2>
         <p className="mt-3 max-w-xl text-base text-muted-foreground">
           Três ciclos para acelerar a primeira virada digital.
         </p>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5">
           {roadmap.map((phase) => (
             <RoadmapPhase key={phase.id} phase={phase} />
           ))}

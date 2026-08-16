@@ -28,7 +28,7 @@ export function NavigationTabs() {
       aria-label="Pilares da transformação"
       className="no-print sticky top-[66px] z-40 border-b border-hairline bg-background/90 backdrop-blur-md"
     >
-      <div className="mx-auto flex max-w-7xl items-center gap-3 px-5 lg:px-8">
+      <div className="mx-auto flex max-w-4xl items-center gap-3 px-5 lg:px-8">
         <span className="hidden shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground lg:block">
           Pilares
         </span>

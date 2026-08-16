@@ -7,14 +7,14 @@ export function ChecklistControls() {
 
   return (
     <div id="checklist" className="border-b border-hairline bg-background">
-      <div className="mx-auto grid max-w-7xl gap-4 px-5 py-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center lg:px-8">
+      <div className="mx-auto flex max-w-4xl flex-col gap-5 px-5 py-6 lg:px-8">
         <div className="min-w-0">
           <h2 className="text-lg font-extrabold">Checklist da transformação</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             {overall.done} de {overall.total} ações concluídas · salvo automaticamente neste navegador
           </p>
         </div>
-        <div className="no-print flex w-full shrink-0 gap-2 sm:w-auto">
+        <div className="no-print flex w-full gap-2">
           <button
             type="button"
             onClick={checkAll}

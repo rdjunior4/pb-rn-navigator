@@ -9,7 +9,7 @@ export function Hero() {
       <div className="hairline-grid absolute inset-0 opacity-70" aria-hidden />
       <div className="hero-glow pointer-events-none absolute -left-32 -top-32 size-[28rem] rounded-full blur-3xl" aria-hidden />
       <div className="hero-glow hero-glow-2 pointer-events-none absolute -right-24 top-24 size-[22rem] rounded-full blur-3xl" aria-hidden />
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-[1.15fr_1fr] lg:gap-16 lg:px-8 lg:py-24">
+      <div className="relative mx-auto max-w-4xl px-5 py-16 lg:py-24">
         <div className="min-w-0">
           <p className="eyebrow text-primary animate-rise" style={{ animationDelay: "40ms" }}>
             Plataforma Digital B2B
@@ -21,7 +21,7 @@ export function Hero() {
             Transformação <span className="text-primary">Digital Comercial</span>
           </h1>
           <p
-            className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground animate-rise sm:text-lg"
+            className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground animate-rise sm:text-lg"
             style={{ animationDelay: "200ms" }}
           >
             Do catálogo digital a uma plataforma capaz de vender, recomendar, reativar, fidelizar e
@@ -48,7 +48,7 @@ export function Hero() {
         </div>
 
         <aside
-          className="lift min-w-0 self-start rounded-3xl bg-graphite p-8 text-graphite-foreground shadow-lift animate-rise print-block sm:p-10"
+          className="lift mt-10 max-w-xl rounded-3xl bg-graphite p-8 text-graphite-foreground shadow-lift animate-rise print-block sm:p-10"
           style={{ animationDelay: "260ms" }}
         >
           <p className="eyebrow text-graphite-muted">Meta Estratégica</p>
