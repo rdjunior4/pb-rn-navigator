@@ -13,7 +13,7 @@ export function Header() {
 
   return (
     <header className="no-print sticky top-0 z-50 border-b border-hairline bg-background/85 backdrop-blur-md">
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3.5 lg:px-8">
+      <div className="mx-auto grid max-w-4xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-3.5 lg:px-8">
         <a href="#topo" className="flex min-w-0 items-center" aria-label="PB & RN Foods — início">
           <Logo className="h-9 sm:h-10" />
         </a>
